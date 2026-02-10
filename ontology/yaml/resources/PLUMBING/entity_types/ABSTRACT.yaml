@@ -27,7 +27,7 @@ SS:
 
 LVLM:
   guid: "288e9cfb-952e-404c-8bfa-586caf1b340b"
-  description: "Level Monitoring for tanks."
+  description: "Level monitoring for tanks."
   is_abstract: true
   implements:
   - /LM # inherits from GLOBAL namespace
