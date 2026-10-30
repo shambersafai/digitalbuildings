@@ -64,6 +64,14 @@ RDM:
   - /RDM
   - MONITORING
 
+RDM:
+  guid: "9b0b6094-b092-4d27-b894-6dbc299e4833"
+  description: "Very basic system run duration monitoring. "
+  is_abstract: true
+  implements:
+  - /RDM
+  - MONITORING
+
 DD:
   guid: "5b09f1bd-f526-4d77-b1a3-1fceda2ba041"
   description: "Dual duct flow control (hot deck, cold deck)."
