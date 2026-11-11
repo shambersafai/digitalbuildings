@@ -51,6 +51,7 @@ WM:
   is_abstract: true
   opt_uses:
   - failed_communication_alarm
+  - master_alarm
 
 HM:
   guid: "9496631b-c154-4d86-857d-c2ffff88ffe4"

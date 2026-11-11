@@ -1,3 +1,4 @@
+
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the License);
@@ -1177,6 +1178,7 @@ DFSS:
   - overload_discharge_fan_alarm
   - zone_occupancy_status
   - user_occupancy_override_status
+  - run_mode
   uses:
   - discharge_fan_run_command
   - discharge_fan_run_status
@@ -1608,15 +1610,7 @@ CWDT:
   description: "Temperature differential across condenser water."
   is_abstract: true
   implements:
-  - MONITORING
-  opt_uses:
-  - high_condensing_return_water_temperature_alarm
-  - low_condensing_return_water_temperature_alarm
-  - high_condensing_supply_water_temperature_alarm
-  - low_condensing_supply_water_temperature_alarm
-  uses:
-  - condensing_return_water_temperature_sensor
-  - condensing_supply_water_temperature_sensor
+  - /CWDT
 
 BSWTC:
   guid: "c37fdc7e-48c2-4f7d-ae6a-f6fe0389ae24"
@@ -4203,6 +4197,23 @@ HT3DC:
   implements:
   - CONTROL
 
+HT3HMLDTC:
+  guid: "ed39c98a-4b5d-4d49-9b12-5f49f27ff598"
+  description: "Multi-level, triple heater control to discharge air temperature."
+  is_abstract: true
+  implements:
+  - CONTROL
+  opt_uses:
+  - high_heater_level_status
+  - low_heater_run_status
+  - medium_heater_level_status
+  uses:
+  - high_heater_level_command
+  - low_heater_level_command
+  - medium_heater_level_command
+  - discharge_air_temperature_sensor
+  - discharge_air_temperature_setpoint
+
 HT3DTC:
   guid: "fe4dc535-b121-4636-9b05-768cc9ecb97e"
   description: "Three electric heater control on discharge side."
@@ -5469,15 +5480,8 @@ CLPM:
   guid: "603cc89d-c8f4-4ab6-bba2-447a2bd2bbab"
   description: "Cooling thermal monitoring."
   is_abstract: true
-  uses:
-  - cooling_thermal_power_sensor
-  opt_uses:
-  - cooling_thermal_energy_accumulator
-  - cooling_thermal_power_capacity
-  - cooling_performanceratio_sensor
-  - power_sensor
   implements:
-  - MONITORING
+  - /CLPM
 
 PCLPM:
   guid: "876a8eaa-b0a3-4af7-bdf8-fbef6a93aca5"
@@ -6559,10 +6563,8 @@ CDWFRM:
   guid: "b4cd6a63-df02-4c7b-bf81-3902cd827241"
   description: "Condenser water flowrate monitoring."
   is_abstract: true
-  uses:
-  - condensing_water_flowrate_sensor
   implements:
-  - MONITORING
+  - /CDWFRM
 
 REFSM:
   guid: "dfcadf28-6b6f-405b-b6f9-c6ac4f445e96"

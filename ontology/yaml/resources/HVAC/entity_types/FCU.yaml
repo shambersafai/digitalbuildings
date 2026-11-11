@@ -715,6 +715,16 @@ FCU_DFVSC_RTC_RHC_DXDC_CFVSC:
   - DXDC
   - CFVSC
 
+FCU_DFVSC_CHWRC_RTC_RMM:
+  guid: "fa1c788f-a47f-466f-8716-47bed2e12f03"
+  description: "DX fan coil with return temperature control and variable speed discharge fan."
+  is_canonical: true
+  implements:
+  - FCU
+  - DFVSC
+  - CHWRC
+  - RMM
+
 FCU_DFSS_DFVSC_RTC_RHC_RHDHC_DXRC:
   guid: "c36bb256-35b7-4abd-b9c0-a7491f432326"
   description: "Variable speed DX fan coil with return temp and humidity control."

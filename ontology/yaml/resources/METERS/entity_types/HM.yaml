@@ -79,3 +79,13 @@ HM_STEAM:
   opt_uses:
   - supply_steam_flowrate_sensor
   - steam_massflow_sensor
+
+HM_CWDT_CDWFRM_CLPM:
+  guid: "0c030a8f-1292-4c16-ac14-9798203af138"
+  description: "Cooling load heat meter with condensing water flowrate monitoring."
+  is_canonical: true
+  implements:
+  - HM
+  - /CWDT
+  - /CDWFRM
+  - /CLPM
