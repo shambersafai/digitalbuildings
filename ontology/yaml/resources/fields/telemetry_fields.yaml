@@ -1987,6 +1987,12 @@ literals:
 - high_gas_pressure_alarm: # For natural gas specifically
   - ACTIVE
   - INACTIVE
+- high_heater_level_command:
+  - ON
+  - OFF
+- high_heater_level_status:
+  - ON
+  - OFF
 - high_heating_air_flowrate_alarm:
   - ACTIVE
   - INACTIVE
@@ -2511,6 +2517,12 @@ literals:
 - low_gas_pressure_alarm: # For natural gas specifically
   - ACTIVE
   - INACTIVE
+- low_heater_level_command:
+  - ON
+  - OFF
+- low_heater_level_status:
+  - ON
+  - OFF
 - low_heating_air_flowrate_alarm:
   - ACTIVE
   - INACTIVE
@@ -2767,6 +2779,12 @@ literals:
     flexible_min: -34473.78945
     flexible_max: 344737.8945
 - medium_discharge_fan_speed_command:
+  - ON
+  - OFF
+- medium_heater_level_command:
+  - ON
+  - OFF
+- medium_heater_level_status:
   - ON
   - OFF
 - medium_smoke_intensity_alarm: # for aspirating type smoke detectors

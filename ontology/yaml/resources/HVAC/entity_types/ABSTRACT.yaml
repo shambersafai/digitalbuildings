@@ -855,6 +855,33 @@ SFVSC:
   implements:
   - OPERATIONAL
 
+SFVSFC:
+  guid: "ee0124bc-fa06-4786-8b79-ddfde5f3fa6a"
+  description: "Variable speed frequency control for supply fans."
+  is_abstract: true
+  opt_uses:
+  - control_mode
+  - supply_fan_current_sensor
+  - supply_fan_energy_accumulator
+  - supply_fan_power_sensor
+  - supply_fan_power_status
+  - supply_fan_run_time_accumulator
+  - supply_fan_speed_frequency_sensor
+  - supply_fan_speed_mode
+  - supply_fan_speed_percentage_sensor
+  - supply_fan_torque_sensor
+  - supply_fan_voltage_sensor
+  - failed_supply_fan_alarm
+  - supply_fan_lost_power_alarm
+  - failed_inverter_alarm
+  - schedule_run_command
+  uses:
+  - supply_fan_run_command
+  - supply_fan_run_status
+  - supply_fan_speed_frequency_command
+  implements:
+  - OPERATIONAL
+
 DFVSC:
   guid: "99ebcfbb-f9a5-446f-8faf-ebf61548e2cd"
   description: "Variable speed control for discharge fans."
@@ -4229,7 +4256,7 @@ HT3HMLDTC:
   - CONTROL
   opt_uses:
   - high_heater_level_status
-  - low_heater_run_status
+  - low_heater_level_status
   - medium_heater_level_status
   uses:
   - high_heater_level_command
@@ -5075,6 +5102,16 @@ CHWISOVM:
   - chilled_water_isolation_valve_status
   implements:
   - MONITORING
+
+CWISOVPM:
+  guid: "c42f6c77-f864-406d-877f-8445cd1f12e0"
+  description: "Condenser water isolation valve control."
+  is_abstract: true
+  opt_uses:
+  - run_command
+  uses:
+  - condensing_water_isolation_valve_percentage_command
+  - condensing_water_isolation_valve_percentage_sensor
 
 HWISOVM:
   guid: "4c24255f-af62-471a-8e0d-8161f5ffc3d4"
