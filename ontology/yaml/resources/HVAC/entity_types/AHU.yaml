@@ -6057,6 +6057,35 @@ AHU_SFVSC3X_EFVSC3X_CHWSC_BSPC3X_SSPC_ECON2X_FDPM2X:
   - ECON2X
   - FDPM2X
 
+AHU_SFVSC_EFVSC_DX6SC_HWSC_ECONM_BSPC_SSPC_SARC:
+  guid: "4199627a-8d85-472d-8eb4-dee5fcf98ce7"
+  description: "Multi-zone AHU with supply and exhaust fan control, six stage compressor control, heating water coil control, economizer control, building and supply static pressure control, and supply air reset control."
+  is_canonical: true
+  implements:
+  - AHU
+  - SFVSC
+  - EFVSC
+  - DX6SC
+  - HWSC
+  - ECONM
+  - BSPC
+  - SSPC
+  - SARC
+
+AHU_SFVSC_EFVSC_DX4SC_ECONM_BSPC_SSPC_SARC:
+  guid: "e143e0c0-83ee-4dc8-bc2f-ff1ea3268158"
+  description: "Multi-zone AHU with four stage compressor control, mixed temperature economizer control, variable speed supply and exhaust fans, and building and supply static pressure control."
+  is_canonical: true
+  implements:
+  - AHU
+  - SFVSC
+  - EFVSC
+  - DX4SC
+  - ECONM
+  - BSPC
+  - SSPC
+  - SARC
+
 ###################################
 ### Existing Non-standard Types ###
 ###################################
@@ -6299,6 +6328,20 @@ AHU_NON_CANONICAL_TYPE_46:
   - INCOMPLETE
   uses:
   - exhaust_air_damper_command
+
+AHU_BSPC_DX2SC_ECON_EFSS_EFVSC_HWSC_SFSS_SFVSC_SSPC_NONCANONICAL_1:
+  guid: "fac7f525-7867-44e2-b53c-338c0174362f"
+  description: "Multi-zone air handler with two stage compressor and heating water valve. Writeback point and exhaust damper point additions."
+  implements:
+  - AHU_BSPC_DX2SC_ECON_EFSS_EFVSC_HWSC_SFSS_SFVSC_SSPC
+  - INCOMPLETE
+  uses:
+  - exhaust_air_damper_command
+  - supervisor_control_mode
+  - supervisor_run_command
+  - supervisor_supply_air_static_pressure_setpoint
+  - supervisor_supply_air_temperature_setpoint
+  - supervisor_outside_air_damper_percentage_command
 
 AHU_NON_CANONICAL_TYPE_47:
   guid: "2b337ced-6542-48aa-8440-42f40dde61d5"
@@ -6681,6 +6724,19 @@ AHU_SFVSC2X_EFVSC2X_CHWSC_HWSC_ECON_BSPC2X_SARC_SSPC_MOAFC:
 ### Existing Non-standard Types ###
 ###################################
 
+AHU_THCWSC_ECON_EDBPC_EFSS_EFVSC_SFSS_SFVSC_SSPC_SARC_NONCANONICAL_1:
+  guid: "dc681493-46ee-4c2d-a8b9-53c3fca3d2c7"
+  description: "Non-Standard multi-zone AHU with thermally conditioned water valve, supply air static pressure control, building static pressure control, and supervisory writeback."
+  is_canonical: false
+  implements:
+  - AHU_THCWSC_ECON_EDBPC_EFSS_EFVSC_SFSS_SFVSC_SSPC_SARC
+  uses:
+  - supervisor_supply_air_static_pressure_setpoint
+  - supervisor_outside_air_damper_percentage_command
+  - supervisor_supply_air_temperature_setpoint
+  - supervisor_run_command
+  - supervisor_control_mode
+
 AHU_BSPC_DX4SC_ECON_EFSS_EFVSC_SFSS_SFVSC_SSPC_RHHC_NONCANONICAL_1:
   guid: "4f641024-9959-4ab3-9869-97fdf93ed47b"
   description: "Non-Standard AHU with humidification and heating water coils on return duct."
@@ -6709,6 +6765,33 @@ AHU_DX2SC_HWSC_ECONM_EFVSC_SFVSC_SSPC_SARC_BSPC_NONCANONICAL_1:
   - run_command
   - supervisor_control_mode_1
   - supervisor_control_mode_2
+  - supervisor_run_command
+  - supervisor_supply_air_static_pressure_setpoint
+  - supervisor_supply_air_temperature_setpoint
+  - supervisor_outside_air_damper_percentage_command
+
+
+AHU_BSPC_DX4SC_ECON_EFSS_EFVSC_HWSC_SFSS_SFVSC_SSPC_NONCANONICAL_1:
+  guid: "ed7482a8-1828-47a6-8f02-1f53ff40dcd5"
+  description: "Multi-zone AHU with four stage compressor cooling control and heating water valve control. Writeback point additions."
+  is_canonical: false
+  implements:
+  - AHU_BSPC_DX4SC_ECON_EFSS_EFVSC_HWSC_SFSS_SFVSC_SSPC
+  uses:
+  - supervisor_control_mode
+  - supervisor_run_command
+  - supervisor_supply_air_static_pressure_setpoint
+  - supervisor_supply_air_temperature_setpoint
+  - supervisor_outside_air_damper_percentage_command
+
+AHU_SS_SARC_BSPC_ECON_MTM_SFSS_SSPC_DX2SC_EFSS_EFVSC_NONCANONICAL_1:
+  guid: "a40420cf-38a3-4adc-b6fe-ce21ffcbe2f0"
+  description: "Multi-zone, cooling only AHU with two stage compressor and static pressure control. Writeback point additions."
+  is_canonical: false
+  implements:
+  - AHU_SS_SARC_BSPC_ECON_MTM_SFSS_SSPC_DX2SC_EFSS_EFVSC
+  uses:
+  - supervisor_control_mode
   - supervisor_run_command
   - supervisor_supply_air_static_pressure_setpoint
   - supervisor_supply_air_temperature_setpoint
