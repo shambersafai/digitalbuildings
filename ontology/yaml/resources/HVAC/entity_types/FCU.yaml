@@ -715,7 +715,7 @@ FCU_DFVSC_RTC_RHC_DXDC_CFVSC:
   - DXDC
   - CFVSC
 
-FCU_DFVSC_CHWRC_RTC_RMM:
+FCU_DFVSC_CHWRC:
   guid: "fa1c788f-a47f-466f-8716-47bed2e12f03"
   description: "DX fan coil with return temperature control and variable speed discharge fan."
   is_canonical: true
@@ -723,7 +723,6 @@ FCU_DFVSC_CHWRC_RTC_RMM:
   - FCU
   - DFVSC
   - CHWRC
-  - RMM
 
 FCU_DFSS_DFVSC_RTC_RHC_RHDHC_DXRC:
   guid: "c36bb256-35b7-4abd-b9c0-a7491f432326"
@@ -1302,6 +1301,15 @@ FCU_HPZTC_CO2C:
   - FCU
   - HPZTC
   - CO2C
+
+FCU_DFSS_CHWBRC:
+  guid: "ad592498-d5a8-450b-9d49-abe6d3df4575"
+  description: "Chilled water FCU with binary chilled water valve, single speed discharge fan, and return air temp control."
+  is_canonical: true
+  implements:
+  - FCU
+  - DFSS
+  - CHWBRC
 
 FCU_DFVSMC_CHWBRC:
   guid: "2f6570ff-4ae6-4c9a-8963-bb3ee9fcd71b"
