@@ -543,15 +543,15 @@ MAU_DFVSFC_CHWDC_HT3HMLDTC_UV:
   - HT3HMLDTC
   - UV
 
-MAU_DFSS_CHWDTC_CHWDT_CLPM_UV_CO2C_DFM:
+MAU_DFSS_CHWDC_CHWDT_CLPM_UV_CO2C_DFM:
   guid: "e2128d78-ff90-4a43-bdb8-9ede240108b5"
-  description: "MAU with signle speed discharge fan, chilled water valve, CO2 control, and UV lamp operation."
+  description: "MAU with single speed discharge fan, chilled water valve, CO2 control, and UV lamp operation."
   is_canonical: true
   implements:
   - MAU
   - DFSS
-  - CHWDTC
   - CHWDC
+  - CHWDT
   - CLPM
   - UV
   - CO2C

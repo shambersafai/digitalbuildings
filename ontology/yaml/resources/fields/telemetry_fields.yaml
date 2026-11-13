@@ -379,6 +379,9 @@ literals:
 - chilled_water_valve_voltage_sensor:
     flexible_min: 0.0
     flexible_max: 120.0
+- chilled_water_volume_accumulator:
+    flexible_min: 0
+    flexible_max: 100000
 - circuitbreaker_status:
   - ON
   - OFF
@@ -600,6 +603,9 @@ literals:
 - condensing_water_valve_percentage_sensor:
     fixed_min: 0.0
     fixed_max: 100.0
+- condensing_water_volume_accumulator:
+    flexible_min: 0
+    flexible_max: 100000
 - conference_call_status:
   - ACTIVE
   - INACTIVE
@@ -785,8 +791,8 @@ literals:
     flexible_min: 0.0
     flexible_max: 94.38948864
 - discharge_air_flowrate_status:
-  - ON
-  - OFF
+  - PRESENT
+  - ABSENT
 - discharge_air_heating_percentage_command:
     fixed_min: 0.0
     fixed_max: 100.0
@@ -4067,8 +4073,8 @@ literals:
     flexible_min: 0.0
     flexible_max: 94.38948864
 - supply_air_flowrate_status:
-  - ON
-  - OFF
+  - PRESENT
+  - ABSENT
 - supply_air_heating_temperature_setpoint:
     flexible_min: 255.9259259
     flexible_max: 338.7037037

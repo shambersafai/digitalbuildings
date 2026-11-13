@@ -105,6 +105,8 @@ CDWFRM:
   is_abstract: true
   uses:
   - condensing_water_flowrate_sensor
+  opt_uses:
+  - condensing_water_volume_accumulator
 
 CLPM:
   guid: "41856703-b8c2-4dd5-a409-fa59ba859868"

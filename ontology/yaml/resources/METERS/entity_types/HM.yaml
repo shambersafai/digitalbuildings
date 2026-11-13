@@ -44,6 +44,7 @@ HM_CHW:
   - failed_alarm
   - failed_chilled_return_water_temperature_alarm
   - failed_chilled_supply_water_temperature_alarm
+  - chilled_water_volume_accumulator
 
 HM_CHW_WAC:
   guid: "441029f3-1324-42c5-aca2-74138500917a"

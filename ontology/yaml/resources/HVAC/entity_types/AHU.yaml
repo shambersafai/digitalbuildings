@@ -1133,9 +1133,9 @@ AHU_BPC_CHWDC_DFSS_DSP_ECOND_HTDC_ZSPC:
   - HTDC
   - ZSPC
 
-AHU_DFVSFC_CHWDC_HT3HMLDTC_ECOND_UV_CO2C2X_ZHM_ZTM:
+AHU_DFVSFC_CHWDC_HT3HMLDTC_ECOND_UV_CO2C2X_ZHM_ZTM_DAIDPC:
   guid: "82fc710e-08ea-4e6c-bb34-44938afaf870"
-  description: "Single zone AHU with variable speed discharge fan, chilled water, multi-level heating, economizing, and CO2 control."
+  description: "Single zone AHU with variable speed discharge fan, chilled water, multi-level heating, economizing, discharge air damper, and CO2 control."
   is_canonical: true
   implements:
   - AHU
@@ -1147,6 +1147,7 @@ AHU_DFVSFC_CHWDC_HT3HMLDTC_ECOND_UV_CO2C2X_ZHM_ZTM:
   - CO2C2X
   - ZHM
   - ZTM
+  - DAIDPC
 
 AHU_CO2C_DFSS_DSP_DXZC_ECONZ_HTZC:
   guid: "1ae90f4a-a5ef-4ea5-b0a3-94b1452d1ec6"
